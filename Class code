@@ -1,0 +1,70 @@
+using System;
+
+namespace LabWork
+{
+    // 2.1. Класс Student
+    class Student { public string name; }
+
+    // 2.2. Класс Car
+    class Car { public int year; }
+
+    // 2.3. Класс Point
+    class Point { public int x; }
+
+    // 2.4. Класс Person
+    class Person
+    {
+        public int age;
+        public void Print() => Console.WriteLine($"Age: {age}");
+    }
+
+    // 2.5. Класс Table
+    class Table
+    {
+        public int rows;
+        public int cols;
+        public void Display() => Console.WriteLine($"Rows: {rows}, Cols: {cols}");
+    }
+
+    // 2.6. Класс Manager
+    class Manager
+    {
+        public int age;
+        public string name;
+        public int GetAge() => age;
+        public string GetName() => name;
+    }
+
+    // 2.7. Класс Point3D
+    class Point3D
+    {
+        public int x, y, z;
+        public void Show() => Console.WriteLine($"X: {x}, Y: {y}, Z: {z}");
+    }
+
+    // 2.8. Класс Shop
+    class Shop
+    {
+        public string name;
+        public string GetName() => name;
+        public void SetName(string newName) => name = newName;
+    }
+
+    // Главный класс, где мы все это чекнем
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Здесь объекты каждого класса для проверки
+            Person p = new Person { age = 20 };
+            p.Print();
+
+            Shop s = new Shop();
+            s.SetName("Пятерочка");
+            Console.WriteLine(s.GetName());
+
+            Console.WriteLine("Все классы созданы успешно!");
+            Console.ReadKey();
+        }
+    }
+}
